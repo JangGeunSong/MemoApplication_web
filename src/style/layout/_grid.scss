@@ -1,0 +1,15 @@
+$breakpoints: (
+    'desktop': 1200px,
+    'tablet': 600px,
+    'mobile': 400px,
+);
+
+@mixin memo-array($size, $sizes: $breakpoints) {
+    @if map-has-key($sizes, $size) {
+        $size: map-get($sizes, $size)
+    }
+    
+    @media screen and (min-width: #{$size}){
+        @content
+    }
+}

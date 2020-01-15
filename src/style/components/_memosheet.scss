@@ -1,0 +1,28 @@
+// 사이즈로 부를때는 모바일부터 순차적으로 호출...
+@include memo-array(mobile) {
+    .memo-sheet {
+        margin: 0;
+        padding: 0;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@include memo-array(tablet) {
+    .memo-sheet {
+        margin: 0;
+        padding: 0;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@include memo-array(desktop) {
+    .memo-sheet {
+        margin: 0;
+        padding: 0;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

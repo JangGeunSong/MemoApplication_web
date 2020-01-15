@@ -1,0 +1,24 @@
+.post-it {
+    width: 18rem;
+    height: 18rem;
+    margin: 1rem;
+    padding: 0;
+    font: arial;
+    text-align: center;
+    -webkit-user-select: auto;
+}
+
+.post-it:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.post-title {
+    font-size: 1rem;
+}
+
+.post-line {
+    width: auto;
+    border: 1px solid $line-color;
+}

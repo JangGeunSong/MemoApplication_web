@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Memopost from '../memo-post'
 
-const index: React.FC = () => {
 
-    const num = 32;
+const Index: React.FC = () => {
+    const [memos, setMemos] = useState([]);
+    
+    useEffect(() => {
+        const response = fetch('http://localhost:5000/memos')
 
-    const posts = [];
-
-    for(let i = 0; i < num; i++) {
-        posts.push(<Memopost key={i} title="This is my memo!1" description="이게 메모라니!1" background="#E58B7F" />)
-    }
+        response
+            .then(res => res.json())
+            .then(data => setMemos(data))
+    }, [])
 
     return (
         <div className="memo-sheet">
-            {posts}
+            {memos.map((memo: { title: string; description: string; background: string; }, idx: string | number | undefined) => (
+                <Memopost key={idx} title={memo.title} description={memo.description} background={memo.background}/>
+            ))}
         </div>
     )
 }
 
-export default index;
+export default Index;

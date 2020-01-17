@@ -1,10 +1,8 @@
 import React from 'react'
 
-type MemoProps = {
-    title: string;
-    description: string;
-    background: string;
-}
+import MemoProps from '../types'
+
+import MemoModal from '../memo-modal'
 
 const index: React.FC<MemoProps> = ({ title, description, background }) => {
     return (
@@ -12,6 +10,7 @@ const index: React.FC<MemoProps> = ({ title, description, background }) => {
             <h1 className="post-title">{title}</h1>
             <hr className="post-line"/>
             <p className="post-description">{description}</p>
+            <MemoModal title={title} description={description} background={background}/>
         </div>
     )
 }

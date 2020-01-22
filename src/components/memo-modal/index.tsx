@@ -44,18 +44,22 @@ const Index:React.FC<ModalProps> = ({ title, description, background, onClick })
         <div className="memo-modal" style={{background: background}}>
             {isUpdate ? 
                 (
-                    <form method="put" onSubmit={(e) => sendToUpdate(e)}>
-                        <input type="text" name="title" value={memoTitle} onChange={onTitleChange}/>
-                        <input type="text" name="description" value={memoDescription} onChange={onDescriptionChange}/>
-                        <input type="text" name="background" value={memoBackground} onChange={onBackgroundChange}/>
+                    <form className="modal-form" method="put" onSubmit={(e) => sendToUpdate(e)}>
+                        <label>Title</label>
+                        <input type="text" name="title" value={memoTitle} onChange={onTitleChange}/><br/>
+                        <label>description</label>
+                        <input type="text" name="description" value={memoDescription} onChange={onDescriptionChange}/><br/>
+                        <label>background</label>
+                        <input type="text" name="background" value={memoBackground} onChange={onBackgroundChange}/><br/>
                         <button type="submit">send</button>
                         <button onClick={changeToMemo}>cancel</button>
                     </form>
                 )
                 :
                 (
-                    <div>
+                    <div className="modal-contents">
                         <h1>{title}</h1>
+                        <hr className="line" />
                         <h3>{description}</h3>
                         <button onClick={changeToUpdate}>Update</button>
                         <button onClick={() => onClick()}>Close</button>

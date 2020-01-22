@@ -28,25 +28,30 @@ const Index: React.FC = () => {
 
     return (
         <div className="memo-sheet">
-            {memos.map((memo: { title: string; description: string; background: string; }, idx: number) => (
-                <Memopost 
-                    key={idx} 
-                    idx={idx}
-                    title={memo.title} 
-                    description={memo.description} 
-                    background={memo.background} 
-                    onClick={sendToModal}
-                />
-            ))}
             {isModalShow ? 
-            (<Memomodal 
-                title={modalProps.title} 
-                description={modalProps.description} 
-                background={modalProps.background} 
-                onClick={closeModal}
-            />) 
+            (
+                <Memomodal 
+                    title={modalProps.title} 
+                    description={modalProps.description} 
+                    background={modalProps.background} 
+                    onClick={closeModal}
+                />
+            ) 
             : 
-            (<div></div>)}
+            (
+                <div className="memo-sheet">
+                    {memos.map((memo: { title: string; description: string; background: string; }, idx: number) => (
+                        <Memopost 
+                            key={idx} 
+                            idx={idx}
+                            title={memo.title} 
+                            description={memo.description} 
+                            background={memo.background} 
+                            onClick={sendToModal}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     )
 }

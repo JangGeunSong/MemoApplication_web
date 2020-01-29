@@ -14,5 +14,14 @@
 
 src  
 --components  
+ㄴ---header  
+ㄴ---memo-modal  
+ㄴ---memo-post  
+ㄴ---memosheet  
+ㄴ---types  
 --style  
+ㄴ---base  
+ㄴ---components  
+ㄴ---layout  
+ㄴ---util  
 -App.tsx(메인 페이지 코드 저장 장소)

@@ -1,6 +1,13 @@
+@each $name, $size in $iterate-size {
+    @include modal-size(#{$name}) {
+        .memo-modal {
+            width: $size;
+        }
+    }
+}
+
 .memo-modal {
     margin: 1rem;
-    width: 80rem;
     height: 35rem;
     text-align: center;
 

@@ -4,7 +4,30 @@ $breakpoints: (
     'mobile': 400px,
 );
 
+$iterate-size: (
+    "10%": 8rem, 
+    "20%": 16rem, 
+    "30%": 24rem, 
+    "40%": 32rem, 
+    "50%": 40rem, 
+    "60%": 48rem,
+    "70%": 56rem,
+    "80%": 64rem,
+    "90%": 72rem,
+    "100%": 80rem,
+);
+
 @mixin memo-array($size, $sizes: $breakpoints) {
+    @if map-has-key($sizes, $size) {
+        $size: map-get($sizes, $size)
+    }
+    
+    @media screen and (min-width: #{$size}){
+        @content
+    }
+};
+
+@mixin modal-size($size, $sizes: $iterate-size) {
     @if map-has-key($sizes, $size) {
         $size: map-get($sizes, $size)
     }

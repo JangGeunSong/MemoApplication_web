@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Memosheet test render test 1`] = `
+<div>
+  <div
+    class="memo-sheet"
+  >
+    <div
+      class="memo-sheet"
+    />
+  </div>
+</div>
+`;

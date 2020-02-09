@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`memo-post component test render post component 1`] = `
+<div>
+  <div
+    class="post-it"
+    style="background: rgb(255, 255, 255);"
+  >
+    <h1
+      class="post-title"
+    >
+      title1
+    </h1>
+    <hr
+      class="post-line"
+    />
+    <p
+      class="post-description"
+    >
+      hello
+    </p>
+  </div>
+</div>
+`;

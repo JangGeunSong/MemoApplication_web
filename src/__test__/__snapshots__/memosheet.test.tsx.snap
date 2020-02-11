@@ -73,61 +73,27 @@ exports[`Memosheet test send to modal render test 1`] = `
     class="memo-sheet"
   >
     <div
-      class="memo-sheet"
+      class="memo-modal"
+      style="background: rgb(255, 255, 255);"
     >
       <div
-        class="post-it"
-        style="background: rgb(255, 255, 255);"
+        class="modal-contents"
       >
-        <h1
-          class="post-title"
-        >
+        <h1>
           title1
         </h1>
         <hr
-          class="post-line"
+          class="line"
         />
-        <p
-          class="post-description"
-        >
+        <h3>
           description1
-        </p>
-      </div>
-      <div
-        class="post-it"
-        style="background: rgb(255, 255, 255);"
-      >
-        <h1
-          class="post-title"
-        >
-          title2
-        </h1>
-        <hr
-          class="post-line"
-        />
-        <p
-          class="post-description"
-        >
-          description2
-        </p>
-      </div>
-      <div
-        class="post-it"
-        style="background: rgb(255, 255, 255);"
-      >
-        <h1
-          class="post-title"
-        >
-          title3
-        </h1>
-        <hr
-          class="post-line"
-        />
-        <p
-          class="post-description"
-        >
-          description3
-        </p>
+        </h3>
+        <button>
+          Update
+        </button>
+        <button>
+          Close
+        </button>
       </div>
     </div>
   </div>

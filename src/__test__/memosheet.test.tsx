@@ -11,6 +11,7 @@ describe('Memosheet test', () => {
     })
     
     it('send to modal render test', async () => {
+        // 모달 전환 테스트
         const memosheet = render(<MemoSheet />)
         await wait(() =>  {
             fireEvent.click(getByText(memosheet.container, 'title1'))
@@ -20,6 +21,7 @@ describe('Memosheet test', () => {
     })
 
     it('modal cancel test', async () => {
+        // 모달 닫기 버튼 테스트
         const memosheet = render(<MemoSheet />)
         await wait(() => {
             fireEvent.click(getByText(memosheet.container, 'title1'))

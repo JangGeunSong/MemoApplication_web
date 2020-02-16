@@ -11,6 +11,10 @@
 
     border: 1px solid $border-color;
     box-sizing: border-box;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .info-button {

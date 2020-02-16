@@ -3,7 +3,7 @@ import React from 'react'
 const index: React.FC = () => {
     return (
         <header className="title">
-            I memoed!
+            <a href="/">I memoed!</a>
             <button className="info-button">infomation</button>
         </header>
     )

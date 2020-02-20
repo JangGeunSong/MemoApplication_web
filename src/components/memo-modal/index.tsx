@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react'
+import { SketchPicker } from 'react-color'
 
 import { ModalProps } from '../types'
 
@@ -25,11 +26,12 @@ const Index:React.FC<ModalProps> = ({ title, description, background, onClick })
         setDescription(e.currentTarget.value)
     }
 
-    const onBackgroundChange = (e: React.FormEvent<HTMLInputElement>) => {
-        setBackground(e.currentTarget.value)
+    const onBackgroundChange = (color: any) => {
+        setBackground(color.hex)
     }
 
     const sendToUpdate = (e: FormEvent) => {
+        e.preventDefault()
         fetch('http://localhost:5000/memo', {
             method: 'put',
             headers: {
@@ -50,7 +52,7 @@ const Index:React.FC<ModalProps> = ({ title, description, background, onClick })
                         <label>description</label>
                         <input type="text" name="description" value={memoDescription} onChange={onDescriptionChange}/><br/>
                         <label>background</label>
-                        <input type="text" name="background" value={memoBackground} onChange={onBackgroundChange}/><br/>
+                        <SketchPicker color={memoBackground} onChangeComplete={onBackgroundChange} /><br/>
                         <button type="submit">send</button>
                         <button onClick={changeToMemo}>cancel</button>
                     </form>

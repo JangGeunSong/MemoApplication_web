@@ -24,6 +24,12 @@ const Index: React.FC = () => {
 
     const closeModal = () => {
         setIsModalShow(false)
+
+        const response = fetch('http://localhost:5000/memos')
+
+        response
+            .then(res => res.json())
+            .then(data => setMemos(data))
     }
 
     return (

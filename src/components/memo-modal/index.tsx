@@ -4,7 +4,7 @@ import { SketchPicker } from 'react-color'
 import { ModalProps } from '../types'
 
 const Index:React.FC<ModalProps> = ({ title, description, background, onClick }) => {
-
+    // state관리는 react hooks를 사용
     const [isUpdate, setIsUpdate] = useState(false)
     const [memoTitle, setTitle] = useState(title)
     const [memoDescription, setDescription] = useState(description)
@@ -43,6 +43,9 @@ const Index:React.FC<ModalProps> = ({ title, description, background, onClick })
     }
 
     return (
+        /*
+            메모를 수정하는 모드인지 상세보기 모드인지를 선택함에 따라 내용이 변화
+        */
         <div className="memo-modal" style={{background: background}}>
             {isUpdate ? 
                 (

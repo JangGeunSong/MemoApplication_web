@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react'
+import React, { useState, FormEvent, useEffect } from 'react'
 import { SketchPicker } from 'react-color'
 
 import { ModalProps } from '../types'
@@ -41,6 +41,10 @@ const Index:React.FC<ModalProps> = ({ title, description, background, onClick })
             body: JSON.stringify({ title: memoTitle, description: memoDescription, background: memoBackground })
         })
     }
+
+    useEffect(() => {
+        console.log('Update every value after fetch API use')
+    }, [memoTitle, memoDescription, memoBackground]) 
 
     return (
         /*

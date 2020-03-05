@@ -49,3 +49,5 @@ Test: Jest + React-Testing-Library
 새 기술을 활용하기 위해 postgresQL을 활용하기 위한 방안을 생각하기로 결정함
 
 관련 처리에 대한 부분은 이번주 말에 생각해보자
+
+postgresql에 대한 부분을 문서를 읽어보는 중
